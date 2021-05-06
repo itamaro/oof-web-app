@@ -49,8 +49,6 @@ class Layout extends Component {
     window.scrollTo(0, 0)
     // let currentage = this.capitalizeFirstLetter(this.props.location.pathname)
 
-    // document.title =
-    //   currentage + " | Skote - React Admin & Dashboard Template"
     if (this.props.leftSideBarTheme) {
       this.props.changeSidebarTheme(this.props.leftSideBarTheme)
     }

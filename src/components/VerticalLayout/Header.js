@@ -404,7 +404,6 @@ const Header = props => {
           position={position}
           onClose={onDrawerClose}
         >
-          {console.log(open)}
           <RightSidebar onClose={onDrawerClose} />
         </ReactDrawer>
       </header>
