@@ -24,7 +24,13 @@ yarn-debug.log*
 yarn-error.log*
 
 .idea
-package.json
 package-lock.json
 .eslintcache
 debug.log
+
+# firebase stuff
+/.firebase
+.firebaserc
+firestore-debug.log
+pubsub-debug.log
+ui-debug.log
