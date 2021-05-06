@@ -30,7 +30,9 @@ debug.log
 
 # firebase stuff
 /.firebase
+/seed
 .firebaserc
+firebase-debug.log
 firestore-debug.log
 pubsub-debug.log
 ui-debug.log

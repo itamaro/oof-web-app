@@ -14,10 +14,10 @@ class FirebaseAuthBackend {
       const auth = app.auth();
       const db = app.firestore();
 
-      if (location.hostname === 'localhost' && location.port === '5000') {
-        console.log("Detected local emulators on localhost");
-        auth.useEmulator("http://localhost:9099");
-        db.useEmulator("localhost", 8080);
+      if (location.hostname === 'localhost' && process.env.REACT_APP_USE_FIREBASE_EMULATORS) {
+        console.log("Detected local emulators on localhost")
+        auth.useEmulator("http://localhost:9099")
+        db.useEmulator("localhost", 8080)
       }
 
       firebase.auth().onAuthStateChanged(user => {
