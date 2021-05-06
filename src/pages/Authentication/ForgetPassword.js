@@ -25,7 +25,7 @@ const ForgetPasswordPage = props => {
   return (
     <React.Fragment>
       <MetaTags>
-        <title>Forget Password | Skote - React Admin & Dashboard Template</title>
+        <title>Forget Password | Onion On Fire</title>
       </MetaTags>
       <div className="home-btn d-none d-sm-block">
         <Link to="/" className="text-dark">
@@ -42,7 +42,7 @@ const ForgetPasswordPage = props => {
                     <Col xs={7}>
                       <div className="text-primary p-4">
                         <h5 className="text-primary">Welcome Back !</h5>
-                        <p>Sign in to continue to Skote.</p>
+                        <p>Sign in to continue to Onion On Fire.</p>
                       </div>
                     </Col>
                     <Col className="col-5 align-self-end">
@@ -113,8 +113,8 @@ const ForgetPasswordPage = props => {
                   </Link>{" "}
                 </p>
                 <p>
-                  © {new Date().getFullYear()} Skote. Crafted with{" "}
-                  <i className="mdi mdi-heart text-danger" /> by Themesbrand
+                  © {new Date().getFullYear()} The Ostrich. Crafted with{" "}
+                  <i className="mdi mdi-heart text-danger" /> by Oogiz
                 </p>
               </div>
             </Col>

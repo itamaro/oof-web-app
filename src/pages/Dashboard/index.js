@@ -9,7 +9,7 @@ const Dashboard = props => {
     <React.Fragment>
       <div className="page-content">
         <MetaTags>
-          <title>Dashboard | Skote - React Admin & Dashboard Template</title>
+          <title>Dashboard | Onion On Fire</title>
         </MetaTags>
         <Container fluid>
           <h3>Dashboard</h3>
