@@ -9,6 +9,17 @@ class FirebaseAuthBackend {
     if (firebaseConfig) {
       // Initialize Firebase
       firebase.initializeApp(firebaseConfig)
+
+      const app = firebase.app();
+      const auth = app.auth();
+      const db = app.firestore();
+
+      if (location.hostname === 'localhost' && location.port === '5000') {
+        console.log("Detected local emulators on localhost");
+        auth.useEmulator("http://localhost:9099");
+        db.useEmulator("localhost", 8080);
+      }
+
       firebase.auth().onAuthStateChanged(user => {
         if (user) {
           localStorage.setItem("authUser", JSON.stringify(user))
