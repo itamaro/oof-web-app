@@ -1,6 +1,7 @@
 import firebase from "firebase/app"
 
 // Add the Firebase products that you want to use
+import "firebase/analytics"
 import "firebase/auth"
 import "firebase/firestore"
 
@@ -10,9 +11,10 @@ class FirebaseAuthBackend {
       // Initialize Firebase
       firebase.initializeApp(firebaseConfig)
 
-      const app = firebase.app();
-      const auth = app.auth();
-      const db = app.firestore();
+      const app = firebase.app()
+      const auth = app.auth()
+      const db = app.firestore()
+      firebase.analytics()
 
       if (location.hostname === 'localhost' && process.env.REACT_APP_USE_FIREBASE_EMULATORS) {
         console.log("Detected local emulators on localhost")
@@ -39,7 +41,8 @@ class FirebaseAuthBackend {
         .auth()
         .createUserWithEmailAndPassword(email, password)
         .then(
-          user => {
+          _user => {
+            firebase.analytics().logEvent("sign_up", {method: "Email/Password"})
             resolve(firebase.auth().currentUser)
           },
           error => {
@@ -77,7 +80,8 @@ class FirebaseAuthBackend {
         .auth()
         .signInWithEmailAndPassword(email, password)
         .then(
-          user => {
+          _user => {
+            firebase.analytics().logEvent("login", {method: "Email/Password"})
             resolve(firebase.auth().currentUser)
           },
           error => {
@@ -138,6 +142,7 @@ class FirebaseAuthBackend {
       if (!!credential) {
         firebase.auth().signInWithCredential(credential)
           .then(user => {
+            firebase.analytics().logEvent("login", {method: type})
             resolve(this.addNewUserToFirestore(user))
           })
           .catch(error => {
