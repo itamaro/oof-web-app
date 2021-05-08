@@ -22,7 +22,7 @@ import { withRouter } from "react-router-dom"
 //Import Breadcrumb
 import Breadcrumb from "../../components/Common/Breadcrumb"
 
-import avatar from "../../assets/images/users/avatar-1.jpg"
+import avatar from "../../assets/images/users/oogi2.jpg"
 // actions
 import { editProfile, resetProfileFlag } from "../../store/actions"
 
