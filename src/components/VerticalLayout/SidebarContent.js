@@ -128,12 +128,6 @@ const SidebarContent = props => {
 
             <li>
               <Link to="/#" className="">
-                <i className="bx bx-chat"></i>
-                <span>{props.t("Chat")}</span>
-              </Link>
-            </li>
-            <li>
-              <Link to="/#" className="">
                 <i className="bx bx-file"></i>
                 <span className="badge rounded-pill bg-success float-end">
                   {props.t("New")}
