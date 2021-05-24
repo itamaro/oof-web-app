@@ -1,8 +1,6 @@
 import React from "react"
-import MetaTags from 'react-meta-tags';
-import {
-  Container
-} from "reactstrap"
+import MetaTags from "react-meta-tags"
+import { Container } from "reactstrap"
 
 const Dashboard = props => {
   return (
