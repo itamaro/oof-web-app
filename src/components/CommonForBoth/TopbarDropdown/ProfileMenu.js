@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types"
 import {
   Dropdown,
   DropdownToggle,
@@ -17,7 +17,6 @@ import { withRouter, Link } from "react-router-dom"
 import user1 from "../../../assets/images/users/oogi2.jpg"
 
 const ProfileMenu = props => {
-  // Declare a new state variable, which we'll call "menu"
   const [menu, setMenu] = useState(false)
 
   const [username, setUsername] = useState("Admin")
