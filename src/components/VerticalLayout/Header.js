@@ -1,11 +1,11 @@
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types"
 import React, { useState } from "react"
 
 import { connect } from "react-redux"
 import { Row, Col } from "reactstrap"
-import ReactDrawer from 'react-drawer';
+import ReactDrawer from "react-drawer"
 import { Link } from "react-router-dom"
-import 'react-drawer/lib/react-drawer.css';
+import "react-drawer/lib/react-drawer.css"
 
 // Reactstrap
 import { Dropdown, DropdownToggle, DropdownMenu } from "reactstrap"
