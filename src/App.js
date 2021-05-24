@@ -40,12 +40,6 @@ const firebaseConfig = {
 initFirebaseBackend(firebaseConfig)
 
 const App = _props => {
-
-  function getLayout() {
-    return VerticalLayout
-  }
-
-  const Layout = getLayout()
   return (
     <React.Fragment>
       <Router>
@@ -64,7 +58,7 @@ const App = _props => {
           {userRoutes.map((route, idx) => (
             <Authmiddleware
               path={route.path}
-              layout={Layout}
+              layout={VerticalLayout}
               component={route.component}
               key={idx}
               isAuthProtected={true}
